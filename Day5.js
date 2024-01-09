@@ -20,3 +20,11 @@ str.replace(pattern, "A"); //"Abcde"
 
 var oi = /a/i; //i를 주게되면 대소문자 구분 x
 var xi = /a/g; //g를 주게되면 검색된 모든 결과(개수) 리턴
+
+//함수지향 - 유효범위(Scope)
+var vscope = "global"; //전역변수 : 전역에서 접근
+function fscope() {
+  var vscope = "local"; //지역변수
+  alert(vscope);
+}
+fscope(); //var를 붙이지 않을 경우 전역변수로 접근
